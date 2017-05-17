@@ -16,6 +16,9 @@ FROM laradock/php-fpm:1.4-56
 
 MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 
+RUN mkdir /usr/local/etc/php/extra
+COPY ./php_browscap.ini /usr/local/etc/php/extra/php_browscap.ini
+
 #
 #--------------------------------------------------------------------------
 # Mandatory Software's Installation
@@ -143,6 +146,17 @@ RUN if [ ${INSTALL_MEMCACHED} = true ]; then \
     # Install the php memcached extension
     pecl install memcached-2.2.0 && \
     docker-php-ext-enable memcached \
+;fi
+
+#####################################
+# PHP Memcache:
+#####################################
+
+ARG INSTALL_MEMCACHE=false
+RUN \
+    # Install the php memcache extension
+    pecl install memcache-3.0.8 && \
+    docker-php-ext-enable memcache \
 ;fi
 
 #####################################
