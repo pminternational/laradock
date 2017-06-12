@@ -260,6 +260,18 @@ RUN if [ ${INSTALL_LDAP} = true ]; then \
     docker-php-ext-install ldap \
 ;fi
 
+#####################################
+# [PM] Image processing:
+#####################################
+
+ARG INSTALL_IMAGE_TOOLS=false
+RUN if [ ${INSTALL_IMAGE_TOOLS} = true ]; then \
+    apt-get update -yqq && \
+    apt-get install -y jpegoptim && \
+    apt-get install -y optipng && \
+    apt-get install -y imagemagick \
+;fi
+
 #
 #--------------------------------------------------------------------------
 # Final Touch
