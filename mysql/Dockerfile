@@ -3,6 +3,9 @@ FROM mysql:5.5
 
 MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 
+RUN apt-get update -yqq
+RUN apt-get -y install pv
+
 RUN chown -R mysql:root /var/lib/mysql/
 
 ADD my.cnf /etc/mysql/conf.d/my.cnf
