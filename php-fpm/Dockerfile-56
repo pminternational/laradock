@@ -19,6 +19,9 @@ MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 RUN mkdir /usr/local/etc/php/extra
 COPY ./php_browscap.ini /usr/local/etc/php/extra/php_browscap.ini
 
+COPY ./mhsendmail /usr/bin/mhsendmail
+RUN chmod +x /usr/bin/mhsendmail
+
 #
 #--------------------------------------------------------------------------
 # Mandatory Software's Installation
