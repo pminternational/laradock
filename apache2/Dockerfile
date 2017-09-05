@@ -8,9 +8,10 @@ RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y libapache2-mod-php5.6
 
-ARG PHP_SOCKET=php-fpm:9000
+ARG PHP_UPSTREAM_CONTAINER=php-fpm
+ARG PHP_UPSTREAM_PORT=9000
 
-ENV WEB_PHP_SOCKET=$PHP_SOCKET
+ENV WEB_PHP_SOCKET=${PHP_UPSTREAM_CONTAINER}:${PHP_UPSTREAM_PORT}
 
 ENV WEB_DOCUMENT_ROOT=/var/www/public/
 
