@@ -537,3 +537,5 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
+
+RUN sed -i "s/short_open_tag = .*/short_open_tag = On/" /etc/php/5.6/cli/php.ini
