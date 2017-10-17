@@ -524,6 +524,23 @@ RUN if [ ${INSTALL_TERRAFORM} = true ]; then \
     && rm terraform_0.10.6_linux_amd64.zip \
 ;fi
 
+#####################################
+# PHP Memcache:
+#####################################
+
+ARG INSTALL_MEMCACHE=false
+ENV CFLAGS -fgnu89-inline
+ENV LDFLAGS -fgnu89-inline
+ENV CXXFLAGS -fgnu89-inline
+
+RUN if [ ${INSTALL_MEMCACHE} = true ]; then \
+    # Install the php memcache extension
+    pecl uninstall memcache-3.0.8 && \
+    pecl install memcache-3.0.8 && \
+    echo "extension=memcache.so" >> /etc/php/5.6/mods-available/memcache.ini && \
+    ln -s /etc/php/5.6/mods-available/memcache.ini /etc/php/5.6/cli/conf.d/40-memcache.ini \
+;fi
+
 #
 #--------------------------------------------------------------------------
 # Final Touch
