@@ -16,6 +16,9 @@ FROM laradock/workspace:1.8-56
 
 MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 
+COPY ./mhsendmail /usr/bin/mhsendmail
+RUN chmod +x /usr/bin/mhsendmail
+
 #
 #--------------------------------------------------------------------------
 # Mandatory Software's Installation
@@ -556,3 +559,5 @@ RUN apt-get clean && \
 WORKDIR /var/www
 
 RUN sed -i "s/short_open_tag = .*/short_open_tag = On/" /etc/php/5.6/cli/php.ini
+
+RUN sed -i "s/;sendmail_path =.*/sendmail_path = \"\/usr\/bin\/mhsendmail --smtp-addr=mailhog:1025\"/" /etc/php/5.6/cli/php.ini
