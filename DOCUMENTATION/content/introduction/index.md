@@ -97,7 +97,7 @@ Beanstalkd - RabbitMQ - PHP Worker
 - **Queueing Management:**
 Beanstalkd Console - RabbitMQ Console
 - **Random Tools:**
-HAProxy - Certbot - Blackfire - Selenium - Jenkins - ElasticSearch - Kibana - Mailhog - Minio - Varnish - Swoole - Laravel Echo...
+HAProxy - Certbot - Blackfire - Selenium - Jenkins - ElasticSearch - Kibana - Grafana - Mailhog - MailDev - Minio - Varnish - Swoole - Laravel Echo...
 
 Laradock introduces the **Workspace** Image, as a development environment.
 It contains a rich set of helpful tools, all pre-configured to work and integrate with almost any combination of Containers and tools you may choose.
@@ -116,6 +116,11 @@ If you can't find your Software in the list, build it yourself and submit it. Co
 
 
 
+## Sponsors
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/JHiroABWV9N5QKgcFuTA2NxX/laradock/laradock'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/JHiroABWV9N5QKgcFuTA2NxX/laradock/laradock.svg' />
+</a>
 
 
 
@@ -170,3 +175,21 @@ What's better than a **Demo Video**:
 You are welcome to join our chat room on Gitter.
 
 [![Gitter](https://badges.gitter.im/Laradock/laradock.svg)](https://gitter.im/Laradock/laradock?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+
+
+
+
+<a name="Donations"></a>
+## Donations
+
+> Help keeping the project development going, by [contributing](http://laradock.io/contributing) or donating a little. 
+> Thanks in advance.
+
+Donate directly via [Paypal](https://www.paypal.me/mzalt)
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/mzalt) 
+
+or show your support via [Beerpay](https://beerpay.io/laradock/laradock) 
+
+[![Beerpay](https://beerpay.io/laradock/laradock/badge.svg?style=flat)](https://beerpay.io/laradock/laradock)
